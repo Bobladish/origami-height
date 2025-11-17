@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宇宙へ到達！紙折りシミュレーター (ポートフォリオ)</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>🚀 紙折り数シミュレーター </h1>
+        <h3>一説によると紙を何回か折ると宇宙に行けるとか…</h3>
+    </header>
+
+    <main>
+        <section class="controls">
+            <h2>📏 初期設定</h2>
+            
+            <div class="base-thickness-setting">
+                <label for="base-thickness-input">紙の初期厚さ (mm):</label>
+                <input type="number" id="base-thickness-input" value="0.1" step="0.01" min="0.01">
+            </div>
+            
+
+            <div class="side-length-setting">
+                <label for="side-length-input">正方形の初期辺の長さ (cm):</label>
+                <input type="number" id="side-length-input" value="15" step="1" min="1">
+            </div>
+        </section>
+
+        <hr>
+        
+        <section class="action">
+            <h2>折る回数を調整</h2>
+            
+            <div class="fold-counter">
+                <button id="subtract-fold-button">- 1回戻す</button>
+                <p>現在の折り回数: <span id="fold-count">0</span> 回</p>
+                <button id="add-fold-button">+ 1回折る</button>
+            </div>
+            
+        </section>
+
+        <hr>
+
+        <section class="results">
+            <h2>📈 測定結果とスケール</h2>
+            
+            <div class="result-display">
+                <h3>最終的な紙の厚さ (高さ):</h3>
+                <p class="data-output" id="thickness-meters">0.00 メートル</p>
+                <p class="data-output" id="thickness-km">0.00 キロメートル</p>
+            </div>
+            
+            <hr>
+
+            <div class="scale-comparison">
+                <h3>この高さは...</h3>
+                <p id="comparison-result">ボタンを押してシミュレーションを開始してください。</p>
+            </div>
+            
+            <hr>
+
+            <h2>📐 紙の形状変化（半分折りを繰り返した場合）</h2>
+            <div class="side-results">
+                <p>現在の折り回数 (<span id="fold-count-side">0</span> 回) における紙のサイズ:</p>
+                <p class="data-output" id="current-width-length">15 cm × 15 cm</p>
+                
+                <p>紙の厚み (計算上):</p>
+                <p class="data-output" id="thickness-cm">0.01 cm</p>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p><small>※初期厚さ、辺の長さを元に計算。現実の紙はここまで折れません。</small></p>
+        <p><small>※コピー用紙は一般的に厚さ0.08mm</small></p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
