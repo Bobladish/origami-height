@@ -77,9 +77,14 @@
     <footer>
         <p><small>※初期厚さ、辺の長さを元に計算。現実の紙はここまで折れません。</small></p>
         <p><small>※コピー用紙は一般的に厚さ0.08mm</small></p>
+
+        <p>&copy; <span id="current-year"></span> Bobladish All Rights Reserved.</p>
+
+            <script>
+                // JavaScriptで現在の年を取得し、IDを持つ要素に挿入する
+                document.getElementById('current-year').textContent = new Date().getFullYear();
+            </script>
     </footer>
-
     <script src="script.js"></script>
-
 </body>
 </html>
